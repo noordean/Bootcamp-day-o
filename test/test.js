@@ -87,3 +87,43 @@ describe("Arithmetic Functionality", function() {
         expect(apGp.aritGeo([])).toBe(0);
       });
  })
+
+//test for the prime numbers
+describe("Prime Numbers Generator", function() {
+      it("should return [] for -2", function() {
+        expect(getPrime.getPrimes(-2).length).toBe(0);
+      });
+
+      it("should return [] for 0", function() {
+        expect(getPrime.getPrimes(0).length).toBe(0);
+      });
+
+      it("should return [] for 1", function() {
+        expect(getPrime.getPrimes(1).length).toBe(0);
+      });
+      it("should return [2] for 2", function() {
+        expect(getPrime.getPrimes(2).length).toBe(1);
+      });
+
+      it("should return [2,3] for 3", function() {
+        expect(getPrime.getPrimes(3).length).toBe(2);
+      });
+
+      it("should return [2,3] for 4", function() {
+        expect(getPrime.getPrimes(4).length).toBe(2);
+      });
+      it("should return [2,3,5] for 5", function() {
+        expect(getPrime.getPrimes(5).length).toBe(3);
+      });
+
+      it("should return [2,3,5] for 6", function() {
+        expect(getPrime.getPrimes(6).length).toBe(3);
+      });
+
+      it("should return [2,3,5,7] for 8", function() {
+        expect(getPrime.getPrimes(8).length).toBe(4);
+      });
+      it("should return 'Invalid number' for 'notANumber'", function() {
+        expect(getPrime.getPrimes(['notANumber'])).toBe('Invalid number');
+      });
+ })

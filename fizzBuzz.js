@@ -1,8 +1,16 @@
 'use strict'
 
-module.exports = {
-	findAverage: function(num1,num2){
-		var avg = (num1+num2)/2;
-		return avg;
+module.exports.fizzBuzz = function(n){
+	if(n%3==0 && n%5==0){
+		return "FizzBuzz";
+	}
+	else if(n%3==0){
+		return "Fizz";
+	}
+	else if(n%5==0){
+		return "Buzz";
+	}
+	else{
+		return n;
 	}
 }
